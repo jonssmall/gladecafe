@@ -10,18 +10,18 @@ myApp.controller('navController', function($scope, $route) {
 myApp.config(function($routeProvider) {
 	$routeProvider
 
-		// route for the home page
+		// route for the home/about page
 		.when('/', {
-			templateUrl : 'pages/home.html',
-			controller  : 'mainController',
-			activeTab: 'home'
-		})
-
-		// route for the about page
-		.when('/about', {
 			templateUrl : 'pages/about.html',
 			controller  : 'aboutController',
 			activeTab: 'about'
+		})
+
+		// route for the menu page
+		.when('/menu', {
+			templateUrl : 'pages/menu.html',
+			controller  : 'menuController',
+			activeTab: 'menu'
 		})
 
 		// route for the contact page
@@ -33,7 +33,7 @@ myApp.config(function($routeProvider) {
 });
 
 // create the controller and inject Angular's $scope
-myApp.controller('mainController', function($scope) {
+myApp.controller('menuController', function($scope) {
 	// create a message to display in our view
 	$scope.message = 'Everyone come and see how good I look!';
 });

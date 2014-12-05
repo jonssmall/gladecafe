@@ -28,7 +28,7 @@
     <![endif]-->
   </head>
 
-  <body ng-controller="mainController">
+  <body>
 
     <div class="site-wrapper">
 
@@ -37,14 +37,14 @@
         <div class="cover-container">
 
           <div class="masthead clearfix">
-            <div class="row">
+            <div class="row" id="logo-header">
               <img src="logo-small.jpg">
             </div>
             <div class="inner">              
               <nav>
                 <ul class="nav masthead-nav" ng-controller="navController">
-                  <li ng-class="{active: $route.current.activeTab == 'home'}"><a href="#">Home</a></li>
-                  <li ng-class="{active: $route.current.activeTab == 'about'}"><a href="#about">About</a></li>
+                  <li ng-class="{active: $route.current.activeTab == 'about'}"><a href="#">About</a></li>
+                  <li ng-class="{active: $route.current.activeTab == 'menu'}"><a href="#menu">Menu</a></li>
                   <li ng-class="{active: $route.current.activeTab == 'contact'}"><a href="#contact">Contact</a></li>
                 </ul>
               </nav>

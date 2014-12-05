@@ -7,3 +7,8 @@ a:hover {
 .social-icon {
   height: 64px;
 }
+
+#logo-header {
+	margin-right: 0;
+	margin-left: 0;
+}
