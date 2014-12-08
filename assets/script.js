@@ -1,5 +1,5 @@
 // create the module and name it scotchApp
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'uiGmapgoogle-maps']);
 
 myApp.controller('navController', function($scope, $route) {
 	$scope.$route = $route;
@@ -40,6 +40,7 @@ myApp.controller('menuController', function($scope) {
 
 myApp.controller('aboutController', function($scope) {
 	$scope.message = 'Look! I am an about page.';
+	$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 });
 
 myApp.controller('contactController', function($scope) {

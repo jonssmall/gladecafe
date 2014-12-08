@@ -30,3 +30,7 @@ a.svg:after {
   left:0;
 }*/
 
+.angular-google-map-container {
+  height: 400px;
+  width: 500px;
+}
