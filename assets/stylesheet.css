@@ -13,6 +13,20 @@ a:hover {
 	margin-left: 0;
 }
 
-.contact-link:hover {
-	text-decoration: none;
+.contact-link a {
+	text-decoration: none !important;	
 }
+
+/*a.svg {
+ position: relative;
+ display: inline-block; 
+}
+a.svg:after {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+}*/
+
