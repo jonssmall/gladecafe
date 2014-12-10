@@ -1,7 +1,13 @@
+body {
+  background-color: #B89470;
+  color: black;
+}
+
 a,
 a:focus,
 a:hover {
   outline: none;
+  color: white;
 }
 
 .social-icon {
@@ -17,20 +23,12 @@ a:hover {
 	text-decoration: none !important;	
 }
 
-/*a.svg {
- position: relative;
- display: inline-block; 
-}
-a.svg:after {
-  content: ""; 
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left:0;
-}*/
-
 .angular-google-map-container {
-  height: 400px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
 }
+
+/*#about-pic-wrapper {
+  height: 300px;
+  width: auto;
+}*/
