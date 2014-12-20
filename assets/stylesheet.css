@@ -47,7 +47,7 @@ a:hover {
     width: 1000px;
 
     /* For responsive */
-    max-width:90%;    
+    max-width:100%;    
 }
 
 /*#about-pic-wrapper {
