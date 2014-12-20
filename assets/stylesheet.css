@@ -28,6 +28,28 @@ a:hover {
   width: 300px;
 }
 
+.thumb {
+    margin-bottom: 30px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/*.modal-content {
+  width: 900px;  
+}
+
+*/
+
+.modal-dialog {
+    width: 1000px;
+
+    /* For responsive */
+    max-width:90%;    
+}
+
 /*#about-pic-wrapper {
   height: 300px;
   width: auto;
