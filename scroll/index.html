@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 
 <head>
 
@@ -69,17 +69,12 @@
     <!-- Intro Section -->
     <section id="intro" class="intro-section">
         <div class="container">
-            <div class="row">
-                <!-- <div class="col-lg-12">
-                    <h1>Scrolling Nav</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
-                </div> -->
-                <div class="row" id="logo-header">
-                    <a href="#">
-                        <img src="/clean-logo.png">
-                    </a>
-                </div>                
+            <div class="row" id="logo-header">
+                <a href="#">
+                    <img src="/clean-logo.png">
+                </a>
+            </div> 
+            <div class="row">                                        
                 <div class="col-sm-6" id="about-pic-wrapper">
                     <img src="/photos/corned-beef.jpg" id="about-pic" class="img-responsive">
                 </div>
@@ -98,16 +93,47 @@
                     <p class="lead">From Southern, homestyle classics to new favorites, you're always welcome in the Glade.</p>
                 </div>            
             </div>
+            <div class="row" style="margin-top:20px;">
+                <p class="lead">
+                    <a href="#menu" class="btn btn-lg btn-success page-scroll">View Menu</a>
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="menu" class="about-section">
+    <section id="menu" class="about-section" ng-controller="menuController">
         <div class="container">
+            <a href="/fullMenu.pdf" target="_blank" class="btn btn-lg btn-success">View Full Menu</a>            
             <div class="row">
+
                 <div class="col-lg-12">
-                    <h1>Menu Section</h1>
+                    <h1 class="page-header">A view from the kitchen</h1>
                 </div>
+               
+                  <div ng-repeat="item in food">
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                      <a class="thumbnail">
+                          <img class="img-responsive" ng-src="{{item.thumbnail}}" alt="{{item.description}}" ng-click="setModal(item)" data-toggle="modal" data-target="#myModal">
+                      </a>
+                    </div>
+                  </div>        
+
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="img-responsive menu-item" ng-src="{{currentPicture}}">
+                    <h3>{{currentDescription}}</h3>        
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     </section>
@@ -121,13 +147,13 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    </section>    
+    
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>    
+    <script src="/assets/scrollScript.js"></script>
 
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
