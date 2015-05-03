@@ -7,13 +7,13 @@
         <h1 class="page-header">A view from the kitchen</h1>
     </div>
    
-    <div ng-repeat="item in food">
-      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-        <a class="thumbnail">
-            <img class="img-responsive" ng-src="{{item.thumbnail}}" alt="{{item.description}}" ng-click="setModal(item)" data-toggle="modal" data-target="#myModal">
-        </a>
-      </div>
-    </div>        
+      <div ng-repeat="item in food">
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+          <a class="thumbnail">
+              <img class="img-responsive" ng-src="{{item.thumbnail}}" alt="{{item.description}}" ng-click="setModal(item)" data-toggle="modal" data-target="#myModal">
+          </a>
+        </div>
+      </div>        
 
 </div>
 
@@ -25,7 +25,7 @@
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
       </div>
       <div class="modal-body">
-        <img class="img-responsive" ng-src="{{currentPicture}}">
+        <img class="img-responsive menu-item" ng-src="{{currentPicture}}">
         <h3>{{currentDescription}}</h3>        
       </div>
     </div>
