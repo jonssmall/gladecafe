@@ -50,7 +50,49 @@ myApp.controller('menuController', function($scope) {
 		image: "/photos/apple-pie.jpg",
 		thumbnail: "/photos/thumbnails/apple-pie.jpg"
 	}
-	$scope.food = [cornBeef, chickenClub, hamYam, baconQuiche, blueMangoPie, eggsBenedict, oreoCheesecake, monteCristo]
+	var chickenDumplings = {
+		description: "Chicken & dumplings stew.",
+		image: "/photos/chicken-dumplings.jpg",
+		thumbnail: "/photos/thumbnails/chicken-dumplings.jpg"
+	}
+	var coconutPie = {
+		description: "Gluten-free, sugar-free coconut pie.",
+		image: "/photos/coconut-pie.jpg",
+		thumbnail: "/photos/thumbnails/cocount-pie.jpg"
+	}
+	var codSandwich = {
+		description: "Fried cod with bacon-crumbled macaroni & cheese.",
+		image: "/photos/cod-sandwich.jpg",
+		thumbnail: "/photos/thumbnails/cod-sandwich.jpg"
+	}
+	var manyMuffins = {
+		description: "Assorted muffins baked fresh daily.",
+		image: "/photos/many-muffins.jpg",
+		thumbnail: "/photos/thumbnails/many-muffins.jpg"
+	}
+	var miniCheesecakes = {
+		description: "Cheesecake flavors include oreo, blueberry, caramel & more.",
+		image: "/photos/mini-cheesecakes.jpg",
+		thumbnail: "/photos/thumbnails/mini-cheesecakes.jpg"
+	}
+	var monteKong = {
+		description: "Battered banana bread with egg, creemcheese, bacon, ham & turkey sausage.",
+		image: "/photos/monte-kong.jpg",
+		thumbnail: "/photos/thumbnails/monte-kong.jpg"
+	}
+	var pumpkinPie = {
+		description: "Freshly made pumpkin pie.",
+		image: "/photos/pumpkin-pie.jpg",
+		thumbnail: "/photos/thumbnails/pumpkin-pie.jpg"
+	}
+	var westernBurrito = {
+		description: "Two scrambled eggs, ham, onion, sweet peppers & cheddar cheese.",
+		image: "/photos/western-burrito.jpg",
+		thumbnail: "/photos/thumbnails/western-burrito.jpg"
+	}
+	$scope.food = [cornBeef, chickenClub, hamYam, baconQuiche, blueMangoPie, eggsBenedict, oreoCheesecake, 
+					monteCristo, applePie, chickenDumplings, coconutPie, codSandwich, manyMuffins, miniCheesecakes,
+					monteKong, pumpkinPie];
 
 	$scope.setModal = function(foodItem) {	
 		$scope.currentPicture = foodItem.image;
