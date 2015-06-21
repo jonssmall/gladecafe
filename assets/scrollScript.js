@@ -58,7 +58,7 @@ myApp.controller('menuController', function($scope) {
 	var coconutPie = {
 		description: "Gluten-free, sugar-free coconut pie.",
 		image: "photos/coconut-pie.jpg",
-		thumbnail: "photos/thumbnails/cocount-pie.jpg"
+		thumbnail: "photos/thumbnails/coconut-pie.jpg"
 	}
 	var codSandwich = {
 		description: "Fried cod with bacon-crumbled macaroni & cheese.",
