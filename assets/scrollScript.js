@@ -45,6 +45,11 @@ myApp.controller('menuController', function($scope) {
 		image: "/photos/monte-cristo.jpg",
 		thumbnail: "/photos/thumbnails/monte-cristo.jpg"
 	}
+	var applePie = {
+		description: "Gluten-free, sugar-free apple pie.",
+		image: "/photos/apple-pie.jpg",
+		thumbnail: "/photos/thumbnails/apple-pie.jpg"
+	}
 	$scope.food = [cornBeef, chickenClub, hamYam, baconQuiche, blueMangoPie, eggsBenedict, oreoCheesecake, monteCristo]
 
 	$scope.setModal = function(foodItem) {	
